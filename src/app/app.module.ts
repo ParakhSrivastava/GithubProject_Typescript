@@ -1,24 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { ProfileService } from './Services/profile.service'; 
+import { FormsModule } from '@angular/forms'
+import { HttpClientModule  } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ProfileComponent } from './Components/profile/profile.component';
-
+import { ProfileListComponent } from './profile-list/profile-list.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
-    FormsModule
+    ModalModule.forRoot(),
+    InfiniteScrollModule,
   ],
-  providers: [ProfileService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

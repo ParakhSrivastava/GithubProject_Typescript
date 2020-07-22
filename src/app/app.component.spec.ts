@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'GithubProject'`, () => {
+  it(`should have as title 'UItypescript'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('GithubProject');
+    expect(app.title).toEqual('UItypescript');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('GithubProject app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('UItypescript app is running!');
   });
 });
